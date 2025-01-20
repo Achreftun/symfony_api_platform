@@ -24,7 +24,7 @@ class Personne
     /**
      * @var Collection<int, Adresse>
      */
-    #[ORM\ManyToMany(targetEntity: Adresse::class)]
+    #[ORM\ManyToMany(targetEntity: Adresse::class, cascade: ['persist'])]
     private Collection $adresses;
 
     public function __construct()
